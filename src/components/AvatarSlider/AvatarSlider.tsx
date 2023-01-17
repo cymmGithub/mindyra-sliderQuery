@@ -10,11 +10,12 @@ interface Props {
 
 export const AvatarSlider = ({ userData }: Props) => {
   const [current, setCurrent] = useState(0);
-  const [active, isActive] = useState(false);
+  const [active, setIsActive] = useState(false);
   const sliderLength = userData.length;
 
   const nextSlide = () => {
     setCurrent(current === sliderLength - 1 ? 0 : current + 1);
+    setIsActive((prev) => !prev);
   };
   const prevSlide = () => {
     setCurrent(current === 0 ? sliderLength - 1 : current - 1);

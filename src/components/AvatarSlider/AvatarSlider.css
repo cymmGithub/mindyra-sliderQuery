@@ -7,32 +7,36 @@
 }
 
 .AvatarSlider__left-arrow {
-  position: relative;
+  position: absolute;
+  left: 20%;
   font-size: 4rem;
   color: rgb(255, 255, 255);
   user-select: none;
   cursor: pointer;
   z-index: 10;
-  margin-right: 2rem;
+  filter: drop-shadow(5px 5px 5px #000);
 }
 
 .AvatarSlider__right-arrow {
-  position: relative;
+  position: absolute;
+  right: 20%;
   font-size: 4rem;
   color: rgb(255, 255, 255);
   user-select: none;
   cursor: pointer;
   z-index: 10;
-  margin-left: 2rem;
+  filter: drop-shadow(5px 5px 5px #000);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 760px) {
   .AvatarSlider__right-arrow {
     position: absolute;
-    right: 1%;
+    font-size: 2rem;
+    right: 10%;
   }
   .AvatarSlider__left-arrow {
     position: absolute;
-    left: 1%;
+    font-size: 2rem;
+    left: 10%;
   }
 }
