@@ -1,0 +1,23 @@
+.AvatarSlider__container {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.AvatarSlider__left-arrow {
+  position: absolute;
+  top: 48%;
+  left: 25%;
+  font-size: 4rem;
+  color: black;
+}
+
+.AvatarSlider__right-arrow {
+  position: absolute;
+  top: 48%;
+  right: 25%;
+  font-size: 4rem;
+  color: black;
+}
