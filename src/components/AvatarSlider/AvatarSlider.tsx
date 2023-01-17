@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
+import { MdArrowForwardIos, MdArrowBackIosNew } from "react-icons/md";
 import { AvatarImg } from "../AvatarImg/AvatarImg";
 
 import "./AvatarSlider.css";
@@ -10,6 +10,7 @@ interface Props {
 
 export const AvatarSlider = ({ userData }: Props) => {
   const [current, setCurrent] = useState(0);
+  const [active, isActive] = useState(false);
   const sliderLength = userData.length;
 
   const nextSlide = () => {
@@ -21,12 +22,12 @@ export const AvatarSlider = ({ userData }: Props) => {
 
   return (
     <div className="AvatarSlider__container">
-      <FaArrowAltCircleLeft
+      <MdArrowBackIosNew
         className="AvatarSlider__left-arrow"
         onClick={prevSlide}
       />
       <AvatarImg userName={`${userData[current]}`} />
-      <FaArrowAltCircleRight
+      <MdArrowForwardIos
         className="AvatarSlider__right-arrow"
         onClick={nextSlide}
       />
