@@ -28,6 +28,7 @@
 
 .AvatarSlider__right-arrow {
   position: absolute;
+  cursor: pointer;
   right: 20%;
   font-size: 4rem;
   color: rgb(255, 255, 255);
