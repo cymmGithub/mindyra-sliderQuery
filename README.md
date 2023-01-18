@@ -5,6 +5,6 @@ because once images are fetched application is no more requesting for them. Slid
 
 <img src="https://i.imgur.com/0rTY6Z7.gif" height='200'/>
 
-<h3>
+<h2>
     <a href="https://mecha-k-duels.herokuapp.com/"><strong>LIVE</strong></a>
 </h3>
