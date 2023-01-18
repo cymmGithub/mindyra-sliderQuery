@@ -41,7 +41,6 @@
   opacity: 0.8;
   height: fit-content;
   font-size: 4rem;
-  margin: 0.7rem;
 }
 .AvatarSlider__dot-active {
   position: relative;
@@ -49,9 +48,7 @@
   font-size: 4rem;
   animation: dotGrow 0.8s;
   animation-fill-mode: forwards;
-  cursor: pointer;
   height: fit-content;
-  margin: 0.7rem;
 }
 .AvatarSlider__dot-container {
   display: flex;
