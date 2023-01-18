@@ -20,6 +20,10 @@ export const AvatarSlider = ({ userData }: Props) => {
     setCurrent(current === 0 ? sliderLength - 1 : current - 1);
   };
 
+  const goToSlide = (slideIndex: number) => {
+    setCurrent(slideIndex);
+  };
+
   return (
     <div className="AvatarSlider__container">
       <MdArrowBackIosNew
@@ -43,6 +47,7 @@ export const AvatarSlider = ({ userData }: Props) => {
       <div className="AvatarSlider__dot-container">
         {userData.map((user, index) => (
           <BsDot
+            onClick={() => goToSlide(index)}
             key={index}
             className={
               index === current
