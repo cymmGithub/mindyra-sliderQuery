@@ -1,0 +1,14 @@
+.LoadingError__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 350px;
+  color: white;
+}
+
+.LoadingError__icon {
+  margin: 1rem;
+  font-size: 3rem;
+}

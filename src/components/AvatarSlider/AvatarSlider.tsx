@@ -25,7 +25,16 @@ export const AvatarSlider = ({ userData }: Props) => {
         className="AvatarSlider__left-arrow"
         onClick={prevSlide}
       />
-      <AvatarImg userName={`${userData[current]}`} />
+      {userData.map((user, index) => {
+        return (
+          <div
+            key={index}
+            className={index === current ? "AvatarSlider__active-slide" : ""}
+          >
+            {index === current && <AvatarImg userName={user} />}
+          </div>
+        );
+      })}
       <MdArrowForwardIos
         className="AvatarSlider__right-arrow"
         onClick={nextSlide}

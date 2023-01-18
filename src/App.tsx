@@ -1,25 +1,10 @@
-import {
-  createBrowserRouter,
-  createRoutesFromElements,
-  Route,
-  RouterProvider,
-  Routes,
-} from "react-router-dom";
 import { AvatarSlider } from "./components/AvatarSlider/AvatarSlider";
+import { LoadingError } from "./components/LoadingError/LoadingError";
 import { usersData } from "./db/usersData";
 
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <Route>
-      <Route index element={<AvatarSlider userData={usersData} />} />
-    </Route>
-  )
-);
-
 export const App = () => {
-  return (
-    <>
-      <RouterProvider router={router} />
-    </>
-  );
+  if (!usersData.length) {
+    return <LoadingError />;
+  }
+  return <AvatarSlider userData={usersData} />;
 };

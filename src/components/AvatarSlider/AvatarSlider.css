@@ -6,6 +6,23 @@
   align-items: center;
 }
 
+.AvatarSlider__active-slide {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 1.5s;
+  filter: drop-shadow(5px 5px 10px #000);
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .AvatarSlider__left-arrow {
   position: absolute;
   left: 20%;

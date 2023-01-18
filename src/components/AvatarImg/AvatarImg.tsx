@@ -9,7 +9,7 @@ interface Props {
 export const AvatarImg = ({ userName }: Props) => {
   const { user, isLoading, isError } = useUser(userName);
 
-  if (isLoading) return <div className="loader"></div>;
+  if (isLoading) return <div className="AvatarImg__loader"></div>;
   if (isError) return <p>Something went wrong...:(</p>;
   return <img className="AvatarImg" src={user.avatar_url} />;
 };
