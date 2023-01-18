@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { MdArrowForwardIos, MdArrowBackIosNew } from "react-icons/md";
+import { BsDot } from "react-icons/bs";
 import { AvatarImg } from "../AvatarImg/AvatarImg";
 
 import "./AvatarSlider.css";
@@ -29,12 +30,29 @@ export const AvatarSlider = ({ userData }: Props) => {
         return (
           <div
             key={index}
-            className={index === current ? "AvatarSlider__active-slide" : ""}
+            className={
+              index === current
+                ? "AvatarSlider__active-slide"
+                : "AvatarSlider__slide"
+            }
           >
             {index === current && <AvatarImg userName={user} />}
           </div>
         );
       })}
+      <div className="AvatarSlider__dot-container">
+        {userData.map((user, index) => (
+          <BsDot
+            key={index}
+            className={
+              index === current
+                ? "AvatarSlider__dot-active"
+                : "AvatarSlider__dot"
+            }
+          />
+        ))}
+      </div>
+
       <MdArrowForwardIos
         className="AvatarSlider__right-arrow"
         onClick={nextSlide}
