@@ -7,8 +7,20 @@ that is because once images are fetched, application do not need anymore to requ
 
 <h2>
     <a href="https://mindyra-slider-swr.vercel.app/"><strong>LIVE</strong></a>
-</h3>
+</h2>
 
 <img src="https://i.imgur.com/0rTY6Z7.gif" height='200'/>
 
 </div>
+
+## Available Scripts
+
+In the project directory, you can run:
+
+    npm start
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
