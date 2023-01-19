@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { MdArrowForwardIos, MdArrowBackIosNew } from "react-icons/md";
-import { BsDot } from "react-icons/bs";
 import { AvatarImg } from "../AvatarImg/AvatarImg";
+import { AvatarSliderNavDots } from "../AvatarSliderNavDots/AvatarSliderNavDots";
 
 import "./AvatarSlider.css";
 
@@ -44,19 +44,12 @@ export const AvatarSlider = ({ userData }: Props) => {
           </div>
         );
       })}
-      <div className="AvatarSlider__dot-container">
-        {userData.map((user, index) => (
-          <BsDot
-            onClick={() => goToSlide(index)}
-            key={index}
-            className={
-              index === current
-                ? "AvatarSlider__dot-active"
-                : "AvatarSlider__dot"
-            }
-          />
-        ))}
-      </div>
+
+      <AvatarSliderNavDots
+        userData={userData}
+        onDotClick={goToSlide}
+        currentSlideIndex={current}
+      />
 
       <MdArrowForwardIos
         className="AvatarSlider__right-arrow"

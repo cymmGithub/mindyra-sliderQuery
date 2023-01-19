@@ -36,34 +36,6 @@
   z-index: 10;
   filter: drop-shadow(5px 5px 5px #000);
 }
-.AvatarSlider__dot {
-  position: relative;
-  color: aliceblue;
-  opacity: 0.8;
-  height: fit-content;
-  font-size: 4rem;
-}
-.AvatarSlider__dot-active {
-  position: relative;
-  color: aliceblue;
-  font-size: 4rem;
-  animation: dotGrow 0.8s;
-  animation-fill-mode: forwards;
-  height: fit-content;
-}
-.AvatarSlider__dot-container {
-  display: flex;
-  position: absolute;
-  flex-direction: row;
-  justify-content: space-evenly;
-  bottom: 10%;
-  width: fit-content;
-  height: fit-content;
-}
-
-path {
-  cursor: pointer;
-}
 
 @keyframes dotGrow {
   from {
