@@ -6,6 +6,5 @@ export const App = () => {
   if (!usersData.length) {
     return <LoadingError />;
   }
-
   return <AvatarSlider userData={usersData} />;
 };

@@ -12,5 +12,5 @@ export const AvatarImg = ({ userName }: Props) => {
 
   if (isLoading) return <div className="AvatarImg__loader"></div>;
   if (isError || !user) return <LoadingError />;
-  return <img className="AvatarImg" src={user.avatar_url} />;
+  return <img className="AvatarImg" src={user.avatar_url} alt={user.login} />;
 };

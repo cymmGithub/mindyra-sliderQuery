@@ -1,4 +1,3 @@
-import { propNames } from "@chakra-ui/react";
 import { BsDot } from "react-icons/bs";
 
 import "./AvatarSliderNavDots.css";
