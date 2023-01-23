@@ -1,6 +1,6 @@
 import { BsDot } from "react-icons/bs";
 
-import "./AvatarSliderNavDots.css";
+import styles from "./AvatarSliderNavDots.module.css";
 
 interface Props {
   userData: string[];
@@ -14,15 +14,13 @@ export const AvatarSliderNavDots = ({
   onDotClick,
 }: Props) => {
   return (
-    <div className="AvatarSlider__dot-container">
+    <div className={styles.dotContainer}>
       {userData.map((user, index) => (
         <BsDot
           onClick={() => onDotClick(index)}
           key={index}
           className={
-            index === currentSlideIndex
-              ? "AvatarSlider__dot-active"
-              : "AvatarSlider__dot"
+            index === currentSlideIndex ? styles.dotActive : styles.dot
           }
         />
       ))}

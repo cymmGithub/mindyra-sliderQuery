@@ -3,7 +3,7 @@ import { MdArrowForwardIos, MdArrowBackIosNew } from "react-icons/md";
 import { AvatarImg } from "../AvatarImg/AvatarImg";
 import { AvatarSliderNavDots } from "../AvatarSliderNavDots/AvatarSliderNavDots";
 
-import "./AvatarSlider.css";
+import styles from "./AvatarSlider.module.css";
 
 interface Props {
   userData: string[];
@@ -25,20 +25,13 @@ export const AvatarSlider = ({ userData }: Props) => {
   };
 
   return (
-    <div className="AvatarSlider__container">
-      <MdArrowBackIosNew
-        className="AvatarSlider__left-arrow"
-        onClick={prevSlide}
-      />
+    <div className={styles.container}>
+      <MdArrowBackIosNew className={styles.leftArrow} onClick={prevSlide} />
       {userData.map((user, index) => {
         return (
           <div
             key={index}
-            className={
-              index === current
-                ? "AvatarSlider__active-slide"
-                : "AvatarSlider__slide"
-            }
+            className={index === current ? styles.activeSlide : styles.slide}
           >
             {index === current && <AvatarImg userName={user} />}
           </div>
@@ -51,10 +44,7 @@ export const AvatarSlider = ({ userData }: Props) => {
         currentSlideIndex={current}
       />
 
-      <MdArrowForwardIos
-        className="AvatarSlider__right-arrow"
-        onClick={nextSlide}
-      />
+      <MdArrowForwardIos className={styles.rightArrow} onClick={nextSlide} />
     </div>
   );
 };
