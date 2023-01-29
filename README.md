@@ -2,8 +2,7 @@
 
 ## Simply Slider App made with React
 
-Slider is pretty fast even with slow connections thanks to SWR's built-in catching,
-that is because once images are fetched, application do not need anymore to request for them. Slider of course is fully responsive. Feel free to check live version!
+Second touch on Slider App this time I used TanStack Query to fetch data from github's api.
 
 <h2>
     <a href="https://mindyra-slider-swr.vercel.app/"><strong>LIVE</strong></a>
