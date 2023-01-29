@@ -30,3 +30,8 @@ export interface UserInfo {
   created_at: string;
   updated_at: string;
 }
+
+export interface User {
+  name: string;
+  id: number;
+}

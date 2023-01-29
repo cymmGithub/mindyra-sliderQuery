@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { MdArrowForwardIos, MdArrowBackIosNew } from "react-icons/md";
+import { User } from "../../types/user";
 import { AvatarImg } from "../AvatarImg/AvatarImg";
 import { AvatarSliderNavDots } from "../AvatarSliderNavDots/AvatarSliderNavDots";
 
 import styles from "./AvatarSlider.module.css";
 
 interface Props {
-  userData: string[];
+  userData: User[];
 }
 
 export const AvatarSlider = ({ userData }: Props) => {
@@ -33,7 +34,9 @@ export const AvatarSlider = ({ userData }: Props) => {
             key={index}
             className={index === current ? styles.activeSlide : styles.slide}
           >
-            {index === current && <AvatarImg userName={user} />}
+            {index === current && (
+              <AvatarImg userName={user.name} userId={user.id} />
+            )}
           </div>
         );
       })}

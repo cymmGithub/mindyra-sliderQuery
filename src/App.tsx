@@ -1,10 +1,15 @@
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { AvatarSlider } from "./components/AvatarSlider/AvatarSlider";
-import { LoadingError } from "./components/LoadingError/LoadingError";
 import { usersData } from "./db/usersData";
 
+const queryClient = new QueryClient();
+
 export const App = () => {
-  if (!usersData.length) {
-    return <LoadingError />;
-  }
-  return <AvatarSlider userData={usersData} />;
+  return (
+    <QueryClientProvider client={queryClient}>
+      <AvatarSlider userData={usersData} />
+      <ReactQueryDevtools />
+    </QueryClientProvider>
+  );
 };

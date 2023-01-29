@@ -1,9 +1,10 @@
 import { BsDot } from "react-icons/bs";
+import { User } from "../../types/user";
 
 import styles from "./AvatarSliderNavDots.module.css";
 
 interface Props {
-  userData: string[];
+  userData: User[];
   currentSlideIndex: number;
   onDotClick: (index: number) => void;
 }
