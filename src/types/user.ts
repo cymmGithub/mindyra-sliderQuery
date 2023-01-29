@@ -1,4 +1,4 @@
-export interface UserInfo {
+export interface UserInfoRes {
   login: string;
   id: number;
   node_id: string;
@@ -31,7 +31,7 @@ export interface UserInfo {
   updated_at: string;
 }
 
-export interface User {
+export interface UserData {
   name: string;
   id: number;
 }

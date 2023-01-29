@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { MdArrowForwardIos, MdArrowBackIosNew } from "react-icons/md";
-import { User } from "../../types/user";
+import { UserData } from "../../types/user";
 import { AvatarImg } from "../AvatarImg/AvatarImg";
 import { AvatarSliderNavDots } from "../AvatarSliderNavDots/AvatarSliderNavDots";
 
 import styles from "./AvatarSlider.module.css";
 
 interface Props {
-  userData: User[];
+  userData: UserData[];
 }
 
 export const AvatarSlider = ({ userData }: Props) => {
